@@ -1,6 +1,5 @@
 from fastapi import APIRouter
 
-
 from app.service.weather_service import get_weather
 from app.schemas import weather_response, units
 
