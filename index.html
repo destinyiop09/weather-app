@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/frontend/css/style.css" />
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <main class="app-container">
+        <!-- App Header -->
+        <header class="app-header">
+          <h1 class="app-title">Weather App</h1>
+          <p class="app-subtitle">Check the current weather in any city.</p>
+        </header>
+
+        <!-- Search & Unit Selection Form -->
+        <form id="weather-form" class="search-form">
+          <!-- City Input and Search Button -->
+          <div class="search-box">
+            <input
+              type="text"
+              id="city-input"
+              class="city-input"
+              placeholder="Enter city name"
+              autocomplete="off"
+              aria-label="City name"
+            />
+            <button type="submit" id="search-btn" class="search-btn">
+              Search
+            </button>
+          </div>
+
+          <!-- Temperature Unit Selector -->
+          <div class="unit-selector" role="radiogroup" aria-label="Temperature Units">
+            <label class="unit-option">
+              <input type="radio" name="units" value="metric" id="unit-celsius" checked>
+              <span class="unit-radio-custom"></span>
+              <span class="unit-label">Celsius (°C)</span>
+            </label>
+            <label class="unit-option">
+              <input type="radio" name="units" value="imperial" id="unit-fahrenheit">
+              <span class="unit-radio-custom"></span>
+              <span class="unit-label">Fahrenheit (°F)</span>
+            </label>
+          </div>
+        </form>
+
+        <!-- Status & Error Alert Banner -->
+        <div id="status-message" class="status-message hidden" role="alert"></div>
+
+        <!-- Weather Result Card -->
+        <section id="weather-card" class="weather-card hidden" aria-live="polite">
+          <!-- Weather Icon -->
+          <div class="weather-icon-box">
+            <span id="weather-icon" class="weather-icon" role="img" aria-label="Weather icon">☀️</span>
+          </div>
+
+          <!-- City & Country Heading -->
+          <div class="weather-heading">
+            <h2 id="card-city-country" class="city-name">Accra, GH</h2>
+          </div>
+
+          <!-- Temperature Display -->
+          <div class="weather-temperature">
+            <span id="card-temperature" class="temp-value">82°F</span>
+          </div>
+
+          <!-- Weather Condition -->
+          <div class="weather-condition">
+            <span id="card-condition" class="condition-badge">Clear</span>
+          </div>
+
+          <!-- Divider -->
+          <div class="card-divider"></div>
+
+          <!-- Additional Weather Details -->
+          <div class="weather-meta">
+            <div class="meta-row">
+              <span class="meta-label">Country:</span>
+              <span id="card-country" class="meta-value">GH</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Timezone:</span>
+              <span id="card-timezone" class="meta-value">UTC +0</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/frontend/js/app.js"></script>
+  </body>
+</html>
+

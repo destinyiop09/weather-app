@@ -1,0 +1,6 @@
+{
+  "name": "Weather App",
+  "description": "A clean, modern vanilla HTML, CSS, and JavaScript frontend for a FastAPI weather backend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
